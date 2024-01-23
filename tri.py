@@ -38,3 +38,22 @@ def tri_sellection(Liste):
         a+=1
     return Liste
 print(tri_sellection([9, 5, 8, 6, 4,-2, 15, 88, -25, 80, 33, 60, 2, 5, 505]))
+
+
+def maximum(Liste):
+    maximum = Liste[0]
+    for element in Liste:
+        if element > maximum:
+            maximum = element
+    return Liste.index(maximum)
+
+def tri_sellectionparlafin(Liste):
+    a=0
+    b=len(Liste)
+    for i in range(len(Liste[a:b])):
+        idmax = maximum(Liste[a:b])+b
+        if Liste[b] != Liste[idmax]:
+            Liste[b] , Liste[idmax] = Liste[idmax] , Liste[b]
+        b-=1
+    return Liste
+print(tri_sellectionparlafin([9, 5, 8, 6, 4,-2, 15, 88, -25, 80, 33, 60, 2, 5, 505]))
