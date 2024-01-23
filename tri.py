@@ -18,14 +18,23 @@ def tri_bulle(liste):
                 print(liste,i,j )
     return liste
 
+def minimum(Liste):
+    minimum = Liste[0]
+    for element in Liste:
+        if element < minimum:
+            minimum = element
+    return Liste.index(minimum)
+
+
 def tri_sellection(Liste):
-    trie1 = 0
-    trie2=0
+    valeurachanger=0
     a=0
     b=len(Liste)
-    Liste=[]
-    for i in range(len(Liste[a, b])):
-        if Liste[i] < Liste[i+1]:
-            trie1 = Liste[i]
-        trie1, trie2 = Liste[a], Liste[i]
-
+    for i in range(len(Liste[a:b])):
+        idmini = minimum(Liste[a:b])+a
+        valeurachanger = Liste[a]
+        if Liste[a] != Liste[idmini]:
+            Liste[a] , Liste[idmini] = Liste[idmini] , Liste[a]
+        a+=1
+    return Liste
+print(tri_sellection([9, 5, 8, 6, 4,-2, 15, 88, -25, 80, 33, 60, 2, 5, 505]))
