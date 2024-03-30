@@ -1,0 +1,33 @@
+/* *{
+    padding: 0;
+    margin: 0;
+} */
+body{
+    background-color: rgb(10, 175, 175);
+    margin: 0;
+    padding: 0;
+}
+
+.caracteristique{
+    background-color: rgb(0, 119, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.boutton{
+    padding: 10px;
+    width:100%;
+    text-align: center;
+    margin:auto;
+}
+
+th{
+    text-align:left;
+}
+h1{
+    margin: 0;
+}
+
+.erreur{
+    color: red;
+}

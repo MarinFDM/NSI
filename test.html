@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="spe.css">
+        <script src="javascript.js"></script>
+        <title>spécialités</title>
+    </head>
+
+    <body>
+        <h1>CHOIX DES SPECIALITES POUR LA PREMIERE</h1>
+        <form action="traitement.php" method="POST" onsubmit="return validateForm()">
+            <div class="caracteristique">
+                <table>
+                    <tr>
+                        <th>nom :</th>
+                        <td> <input type="text" name="nom" id="nom"></td>
+                        <td id="nom_erreur" class="erreur"></td>
+                    </tr>
+
+                    <tr>
+                        <th>prenom : </th>
+                        <td><input type="text" name='prenom' id="prenom"></td>
+                        <td id="prenom_erreur" class="erreur"></td>
+                    </tr>
+                    
+                    <tr>
+                        <th>genre : </th>
+                        <td><input type="radio" value="Homme" name="genre" > Homme <input type="radio"  value="Femme" name="genre" > Femme</td>
+                        <td id="genre_erreur" class="erreur"></td>
+                    </tr>
+
+                    <tr>
+                        <th class="date" id="date">date de naissance : </th>
+                        <td><input type="date" name="date"></td>
+                    </tr>
+
+                    <tr>
+                        <th>spe 1 :</th>
+                        <td><select name="spe1" id="spe1">
+                            <option value="">--choisissez une option--</option>
+                            <option value="math">Math</option>
+                            <option value="nsi">NSI</option>
+                            <option value="phy-chie">physique-chimie</option>
+                            <option value="hggsp">HGGSP</option>
+                            <option value="HLP">HLP</option>
+                            <option value="AMC">AMC</option>
+                            <option value="SVT">SVT</option>
+                        </select></td>
+                        <td id="spe1_erreur" class="erreur"></td>
+                    </tr>
+                    
+                    <tr>
+                        <th>spe 2 :</th>
+                        <td><select name="spe2" id="spe2">
+                            <option value="">--choisissez une option--</option>
+                            <option value="math">Math</option>
+                            <option value="nsi">NSI</option>
+                            <option value="phy-chie">physique-chimie</option>
+                            <option value="hggsp">HGGSP</option>
+                            <option value="HLP">HLP</option>
+                            <option value="AMC">AMC</option>
+                            <option value="SVT">SVT</option>
+                        </select></td>
+                        <td id="spe2_erreur" class="erreur"></td>
+                    </tr>
+            
+                    <tr>
+                        <th>spe 3 :</th>
+                        <td><select name="spe3" id="spe3" >
+                            <option value="">--choisissez une option--</option>
+                            <option value="math">Math</option>
+                            <option value="nsi">NSI</option>
+                            <option value="phy-chie">physique-chimie</option>
+                            <option value="hggsp">HGGSP</option>
+                            <option value="HLP">HLP</option>
+                            <option value="AMC">AMC</option>
+                            <option value="SVT">SVT</option>
+                        </select></td>
+                        <td id="spe3_erreur" class="erreur"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="boutton">
+                <input type="reset" value="remise à zero" id="reset">
+                <input type="submit" value="validation" id="envoyer">
+            </div>
+        </form>
+    </body>
+</html>
